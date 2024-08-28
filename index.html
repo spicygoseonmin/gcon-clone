@@ -12,7 +12,7 @@
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-WFPFR7WR");
+      })(window, document, "script", "dataLayer", "GTM-TJZ3KK99");
     </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
@@ -20,12 +20,12 @@
     <title>경기콘텐츠진흥원</title>
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <!-- 파비콘 -->
+    <!-- favicon -->
     <link rel="icon" href="images/favicon.png" />
-    <!-- 프리픽스 -->
-    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <!-- prefixfree -->
+    <!-- <link src="js/prefixfree.min.js"></script> -->
     <!-- swiper -->
-    <link rel="stylesheet" href="js/swiper/swiper.css" />
+    <link rel="stylesheet" href="js/swiper/swiper.min.css" />
     <script src="js/swiper/swiper.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
@@ -41,7 +41,7 @@
     <script src="js/sns.js"></script>
     <script src="js/footer.js"></script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBB7Q6FJZ4"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQ29T73G5F"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -49,12 +49,12 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-RBB7Q6FJZ4");
+      gtag("config", "G-PQ29T73G5F");
     </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFPFR7WR" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJZ3KK99" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- 안내창 -->
     <!-- 고정메뉴 -->
@@ -102,7 +102,7 @@
               <img src="images/logo_new.png" alt="경기콘텐츠진흥원" />
             </a>
             <a href="#" class="bro">
-              <i><img src="images/brs-btn.png" alt="브로슈어" />브로슈어</i>
+              <i> <img src="images/brs-btn.png" alt="브로슈어" /> 브로슈어 </i>
             </a>
           </div>
         </div>
@@ -111,9 +111,9 @@
           <div class="pagew clearfix">
             <!-- 스크롤시 로고 -->
             <a href="#" class="logo-gnb">
-              <img src="images/logo_new.png" alt="경기 콘텐츠 진흥원" />
+              <img src="images/logo_new.png" alt="경기콘텐츠진흥원" />
             </a>
-            <!-- 메뉴 -->
+            <!-- menu -->
             <div class="gnb">
               <!-- mainmenu 시작 -->
               <ul class="mainmenu">
@@ -194,6 +194,7 @@
                       <ul class="submenu-3rd">
                         <li><a href="#">콘텐츠해외진출 지원</a></li>
                         <li><a href="#">콘텐츠 기업 투자지원</a></li>
+                        >
                       </ul>
                     </li>
                   </ul>
@@ -377,19 +378,386 @@
           </div>
         </div>
       </header>
-      <!-- 서브메뉴 호버할시 바탕화면 -->
+      <!-- 서브메뉴에 호버했을때 바탕화면 -->
       <div class="header-dim"></div>
       <!-- 컨텐츠 -->
-      <div class="content" id="content"></div>
+      <div class="content" id="content">
+        <div class="pagew">
+          <!-- content-top -->
+          <div class="content-top">
+            <div class="swiper-container sw-content">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="content-notice clearfix">
+                    <div class="content-box notice-bg">
+                      <div class="swiper-container sw-notice">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <a href="#"><img src="images/notice_1.png" alt="" /></a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#"><img src="images/notice_2.png" alt="" /></a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#"><img src="images/notice_3.jpg" alt="" /></a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#"><img src="images/notice_4.jpg" alt="" /></a>
+                          </div>
+                          <div class="swiper-slide">
+                            <a href="#"><img src="images/notice_5.jpg" alt="" /></a>
+                          </div>
+                        </div>
+
+                        <div class="sw-notice-player">
+                          <button class="sw-notice-pause circle"></button>
+                          <button class="sw-notice-play circle"></button>
+                        </div>
+
+                        <div class="sw-notice-page">
+                          <button class="sw-notice-prev circle"></button>
+                          <div class="sw-notice-pg">
+                            <!-- js출력 -->
+                          </div>
+                          <button class="sw-notice-next circle"></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content-box">
+                      <a href="#" class="content-more">더보기</a>
+                      <!-- tap메뉴 -->
+                      <ul class="notice-menu clearfix">
+                        <li class="notice-menu-focus"><a href="#">사업공고</a></li>
+                        <li><a href="#">입찰공고</a></li>
+                        <li><a href="#">결과발표</a></li>
+                      </ul>
+                      <ul class="notice-cont">
+                        <li>
+                          <div class="notice-box">
+                            <div class="notice-box-date">
+                              <span class="notice-box-yymm">2021.06</span>
+                              <span class="notice-box-dd">02</span>
+                            </div>
+                            <div class="notice-box-txt">
+                              <a href="#">
+                                <span class="notice-box-tit"> [재공고]지역상권 연계 퓨처쇼 2021 참여기업 모집 </span>
+                                <span class="notice-box-more"> 자세히 보기 <i class="xi-angle-right-thin"></i> </span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="notice-box">
+                            <div class="notice-box-date">
+                              <span class="notice-box-yymm">2021.05</span>
+                              <span class="notice-box-dd">28</span>
+                            </div>
+                            <div class="notice-box-txt">
+                              <a href="#">
+                                <span class="notice-box-tit"> (모집기간연장) 2021 환경 콘텐츠 비즈니스 시장성강화 지원사업 지원자 공개모집 </span>
+                                <span class="notice-box-more"> 자세히 보기 <i class="xi-angle-right-thin"></i> </span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="notice-box">
+                            <div class="notice-box-date">
+                              <span class="notice-box-yymm">2021.06</span>
+                              <span class="notice-box-dd">14</span>
+                            </div>
+                            <div class="notice-box-txt">
+                              <a href="#">
+                                <span class="notice-box-tit"> 「2021년 디자인 솔루션 랩」 참가기업 모집 공고 </span>
+                                <span class="notice-box-more"> 자세히 보기 <i class="xi-angle-right-thin"></i> </span>
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                        <li>내용없음</li>
+                        <li>
+                          <div class="notice-box">
+                            <div class="notice-box-date">
+                              <span class="notice-box-yymm">2021.06</span>
+                              <span class="notice-box-dd">14</span>
+                            </div>
+                            <div class="notice-box-txt">
+                              <a href="#">
+                                <span class="notice-box-tit"> 2021년 경기 시나리오 기획개발지원 심사 결과 발표 </span>
+                                <span class="notice-box-more"> 자세히 보기 <i class="xi-angle-right-thin"></i> </span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="notice-box">
+                            <div class="notice-box-date">
+                              <span class="notice-box-yymm">2021.05</span>
+                              <span class="notice-box-dd">08</span>
+                            </div>
+                            <div class="notice-box-txt">
+                              <a href="#">
+                                <span class="notice-box-tit"> 2021 경기인디시네마 지원작(상영지원/배급지원 통합공모) 선정결과 </span>
+                                <span class="notice-box-more"> 자세히 보기 <i class="xi-angle-right-thin"></i> </span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="notice-box">
+                            <div class="notice-box-date">
+                              <span class="notice-box-yymm">2021.04</span>
+                              <span class="notice-box-dd">29</span>
+                            </div>
+                            <div class="notice-box-txt">
+                              <a href="#">
+                                <span class="notice-box-tit"> 2021년 융합콘텐츠 창업지원 경쟁부문 예비창업자 선발 최종선정결과 발표 </span>
+                                <span class="notice-box-more"> 자세히 보기 <i class="xi-angle-right-thin"></i> </span>
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="content-alram clearfix">
+                    <div class="content-box alram-bg">
+                      <div class="content-alram-left">
+                        <div class="alram-top">
+                          <a href="#" class="alram-tit">교육 및 행사</a>
+                          <a href="#" class="alram-more">더보기</a>
+                        </div>
+                        <div class="alram-cont">
+                          <a href="#" class="alram-edu-link">
+                            <span class="alram-edu"></span>
+                            <span class="alram-edu-tit"> [경기도1인크리에이터] </span>
+                            <span class="alram-edu-desc"> ‘살롱 드 크리에이터’ 1회차 참여 크리에이터 모집 공고 </span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="content-alram-right">
+                        <div class="alram-top">
+                          <a href="#" class="alram-tit">정책게시판</a>
+                          <a href="#" class="alram-more">더보기</a>
+                        </div>
+                        <div class="alram-cont">
+                          <div class="swiper-container sw-edu">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <a href="#" class="alram-edu-link">
+                                  <span class="alram-edu edu-bg1"></span>
+                                  <span class="alram-edu-tit"> 경기도 옴부즈만 </span>
+                                  <span class="alram-edu-desc"> 도민의 공충을 해결하는 도민의 진정한 대리인! </span>
+                                </a>
+                              </div>
+                              <div class="swiper-slide">
+                                <a href="#" class="alram-edu-link">
+                                  <span class="alram-edu edu-bg2"></span>
+                                  <span class="alram-edu-tit"> 청렴포털 </span>
+                                  <span class="alram-edu-desc"> 세상을 바꾸는 행동하는 양심 공익신고 </span>
+                                </a>
+                              </div>
+                            </div>
+                            <div class="sw-edu-control">
+                              <button class="sw-edu-prev">←</button>
+                              <button class="sw-edu-next">→</button>
+                              <div class="sw-edu-pg"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content-box alram-list-bg">
+                      <div class="alram-tab-menu">
+                        <a href="#" class="alram-tab-menu-focus">공지사항</a>
+                        <a href="#">타기관 공고</a>
+                      </div>
+                      <div class="alram-tab-cont alram-tab-cont-focus">
+                        <div class="alram-cont-box">
+                          <span class="alram-day">
+                            2021.06
+                            <em>09</em>
+                          </span>
+                          <a href="#">
+                            <span class="alram-box-tit"> 공시송달공고문[부정당업자입찰참가자격제한청문시행사전통지] </span>
+                            <span class="alram-box-more">
+                              자세히 보기
+                              <i class="xi-angle-right-thin"></i>
+                            </span>
+                          </a>
+                        </div>
+                        <div class="alram-cont-box">
+                          <span class="alram-day">
+                            2021.05
+                            <em>03</em>
+                          </span>
+                          <a href="#">
+                            <span class="alram-box-tit"> [운영 재개] 경기XR센터 스타트업라운지 및 VR/AR체험공간 이용 안내 </span>
+                            <span class="alram-box-more">
+                              자세히 보기
+                              <i class="xi-angle-right-thin"></i>
+                            </span>
+                          </a>
+                        </div>
+                        <div class="alram-cont-box">
+                          <span class="alram-day">
+                            2021.04
+                            <em>27</em>
+                          </span>
+                          <a href="#">
+                            <span class="alram-box-tit"> 경기VR/AR제작거점센터 (경기XR센터) 시설/장비 이용 안내 </span>
+                            <span class="alram-box-more">
+                              자세히 보기
+                              <i class="xi-angle-right-thin"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="alram-tab-cont">
+                        <div class="alram-cont-box">
+                          <span class="alram-day">
+                            2021.06
+                            <em>09</em>
+                          </span>
+                          <a href="#">
+                            <span class="alram-box-tit"> [경기도] ‘K-Beauty Expo 2021’ 안내 </span>
+                            <span class="alram-box-more">
+                              자세히 보기
+                              <i class="xi-angle-right-thin"></i>
+                            </span>
+                          </a>
+                        </div>
+                        <div class="alram-cont-box">
+                          <span class="alram-day">
+                            2021.05
+                            <em>03</em>
+                          </span>
+                          <a href="#">
+                            <span class="alram-box-tit"> [성북문화재단] 제1회 성북청춘불패영화제 안내 </span>
+                            <span class="alram-box-more">
+                              자세히 보기
+                              <i class="xi-angle-right-thin"></i>
+                            </span>
+                          </a>
+                        </div>
+                        <div class="alram-cont-box">
+                          <span class="alram-day">
+                            2021.04
+                            <em>27</em>
+                          </span>
+                          <a href="#">
+                            <span class="alram-box-tit"> [경기수원월드컵재단] 2021 온라인 서포터즈 모집 </span>
+                            <span class="alram-box-more">
+                              자세히 보기
+                              <i class="xi-angle-right-thin"></i>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                      <a href="#" class="alram-link">더보기</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="calendar-wrap clearfix">
+                    <div class="content-box cal-bg">
+                      <!-- 여기는 달력 코딩 자리  -->
+                    </div>
+                    <div class="content-box cal-bg-list">
+                      <ul class="cal-list">
+                        <li>
+                          <span class="cal-area">북부</span>
+                          <a href="#" class="cal-link">
+                            <span class="cal-tit"> 2021년 융합콘텐츠 제작지원 참가기업 모집 </span>
+                            <span class="cal-more">
+                              자세히 보기
+                              <i class="xi-angle-right-thin"></i>
+                            </span>
+                          </a>
+                        </li>
+                        <li>
+                          <span class="cal-area">북부</span>
+                          <a href="#" class="cal-link">
+                            <span class="cal-tit"> 2021 경기 제작(메이커) 프로젝트 지원 모집공고 </span>
+                            <span class="cal-more">
+                              자세히 보기
+                              <i class="xi-angle-right-thin"></i>
+                            </span>
+                          </a>
+                        </li>
+                        <li>
+                          <span class="cal-area">광명</span>
+                          <a href="#" class="cal-link">
+                            <span class="cal-tit"> 광명 경기문화창조허브 <지구 지킴이 체험단> 모집 </span>
+                            <span class="cal-more">
+                              자세히 보기
+                              <i class="xi-angle-right-thin"></i>
+                            </span>
+                          </a>
+                        </li>
+                        <li>
+                          <span class="cal-area">판교</span>
+                          <a href="#" class="cal-link">
+                            <span class="cal-tit"> <2021 청년창업 SMART2030> 예비 창업자 모집 </span>
+                            <span class="cal-more">
+                              자세히 보기
+                              <i class="xi-angle-right-thin"></i>
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                      <a href="#" class="cal-detail">더보기</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-navi -->
+          <div class="content-navi">
+            <div class="swiper-container sw-navi">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="content-tab">
+                    <img src="images/logo_sm01_oct.jpg" alt="" class="content-tab-img" />
+                    <span class="content-tab-icon">
+                      <i class="xi-message-o"></i>
+                    </span>
+                    <span class="content-tab-tit">공고알림</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="content-tab">
+                    <img src="images/logo_sm01_oct.jpg" alt="" class="content-tab-img" />
+                    <span class="content-tab-icon">
+                      <i class="xi-alarm-o"></i>
+                    </span>
+                    <span class="content-tab-tit">교육 및 기타 알림</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="content-tab">
+                    <img src="images/logo_sm01_oct.jpg" alt="" class="content-tab-img" />
+                    <span class="content-tab-icon">
+                      <i class="xi-calendar-check"></i>
+                    </span>
+                    <span class="content-tab-tit">월별 행사 캘린더</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sw-navi-prev">
+                <i class="xi-long-arrow-left"></i>
+              </div>
+              <div class="sw-navi-next">
+                <i class="xi-long-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- 허브영역 -->
       <div class="hub" id="hub"></div>
-      <!-- sns 영역 -->
+      <!-- sns영역 -->
       <div class="sns" id="sns"></div>
-      <!-- 뉴스 배너 영역 -->
+      <!-- 뉴스베너영역 -->
       <div class="news-banner"></div>
-      <!-- 서비스 영역 -->
+      <!-- 서비스영역 -->
       <div class="service"></div>
-      <!-- 하단 영역 -->
+      <!-- 하단영역 -->
       <footer class="footer"></footer>
     </div>
   </body>
