@@ -163,6 +163,45 @@ $(document).ready(function () {
     noticeLi.hide();
     noticeLi.eq(_index).show();
   }
-
+  // sw-edu swiper
+  const sw_edu = new Swiper(".sw-edu", {
+    autoplay: {
+      delay: 2000,
+      // 사용자가 터치드래그 하고 난 후 자동 실행
+      disableOnInteraction: false,
+    },
+    loop: true,
+    nested: true,
+    navigation: {
+      nextEl: ".sw-edu-next",
+      prevEl: ".sw-edu-prev",
+    },
+    pagination: {
+      el: ".sw-edu-pg",
+      type: "fraction",
+    },
+  });
+  // 알림 탭메뉴
+  const alramA = $(".alram-tab-menu a");
+  const alramCont = $(".alram-tab-cont");
+  $.each(alramA, function (index, ietm) {
+    $(this).click(function (e) {
+      e.preventDefault();
+      alramCont.removeClass("alram-tab-cont-focus");
+      alramCont.eq(index).addClass("alram-tab-cont-focus");
+      alramA.removeClass("alram-tab-menu-focus");
+      alramA.eq(index).addClass("alram-tab-menu-focus");
+    });
+  });
+  // hub메뉴기능
+  const hubMenus = $(".hub-menu a");
+  const hubInfos = $(".hub-info > li");
+  $.each(hubMenus, function (index, item) {
+    // console.log(this);
+    $(this).mouseenter(function () {
+      hubInfos.removeClass("hub-info-focus");
+      hubInfos.eq(index).addClass("hub-info-focus");
+    });
+  });
   // ====================================
 });

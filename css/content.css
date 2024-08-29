@@ -4,7 +4,7 @@
   position: relative;
   display: block;
   margin-bottom: 50px;
-  background-color: rgb(221, 250, 215);
+  /* background-color: rgb(221, 250, 215); */
 }
 .content .pagew {
   width: 1420px;
@@ -33,7 +33,7 @@
   padding: 30px;
 }
 .notice-bg {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
 }
 /* .sw-notice a{
     position: relative;
@@ -47,7 +47,7 @@
   bottom: 10px;
   display: block;
   z-index: 99;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
 }
 .circle {
   position: relative;
@@ -169,7 +169,7 @@
   font-weight: 500 !important;
 }
 .notice-cont {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   position: relative;
   display: block;
   margin-left: 50px;
@@ -263,16 +263,313 @@
 }
 
 /* 알림영역 */
+.content-alram {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.alram-bg {
+  background: #2a3a67 url("../images/bg_pattern.png");
+}
+
+.alram-list-bg {
+  background: url("../images/bg_gray.jpg") no-repeat center;
+  background-size: cover;
+}
+.content-alram-left,
+.content-alram-right {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 40px 17px 20px 25px;
+}
+.alram-top {
+  position: relative;
+  display: block;
+}
+.alram-tit {
+  position: relative;
+  display: block;
+  font-family: "NanumSquare";
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 30px;
+}
+.alram-tit::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 100%;
+}
+
+.alram-more {
+  position: absolute;
+  right: 0;
+  top: 9px;
+
+  display: block;
+  font-family: "NanumSquare";
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+.alram-cont {
+  position: relative;
+  display: block;
+  padding-top: 35px;
+}
+.alram-edu {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 175px;
+  background: url("../images/post.jpg") no-repeat top;
+  background-size: cover;
+  margin-bottom: 25px;
+}
+.alram-edu-link:hover .alram-edu-tit {
+  text-decoration: underline;
+}
+.alram-edu-tit {
+  position: relative;
+  display: block;
+  font-family: "NanumSquare";
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 2.6rem;
+  margin-bottom: 10px;
+}
+.alram-edu-desc {
+  position: relative;
+  display: block;
+  font-family: "NanumSquare";
+  font-size: 1.7rem;
+  font-weight: 100;
+  line-height: 2.4rem;
+  color: #fff;
+}
+.sw-edu {
+  padding-bottom: 60px;
+}
+.sw-edu-control {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  white-space: nowrap;
+}
+.sw-edu-prev {
+  position: relative;
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: #fff;
+  border: none;
+  border-radius: 100%;
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 23px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.sw-edu-next {
+  position: relative;
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: #fff;
+  border: none;
+  border-radius: 100%;
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 23px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.sw-edu-pg {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  bottom: 0;
+  line-height: 23px;
+  font-family: "NanumSquare";
+}
+.sw-edu-pg .swiper-pagination-current {
+  margin-right: 10px;
+}
+
+.sw-edu-pg .swiper-pagination-total {
+  margin-left: 10px;
+}
+.edu-bg1 {
+  background: url("../images/edu1.jpg") no-repeat top;
+  background-size: cover;
+}
+
+.edu-bg2 {
+  background: url("../images/edu2.png") no-repeat top;
+  background-size: cover;
+}
+.alram-tab-menu {
+  position: relative;
+  display: block;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.alram-tab-menu a {
+  position: relative;
+  display: inline-block;
+  font-size: 2.4rem;
+  font-family: "NanumSquare";
+  color: rgba(85, 85, 85, 0.5);
+
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  margin-right: 20px;
+  transition: color 0.3s;
+}
+
+.alram-tab-menu a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -11px;
+  width: 6px;
+  height: 6px;
+  background: #555;
+  border-radius: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.alram-tab-menu a:hover {
+  color: rgba(85, 85, 85, 1);
+}
+.alram-tab-menu a:hover::before {
+  opacity: 1;
+}
+/* js tab 적용 class */
+.alram-tab-menu-focus {
+  color: rgba(85, 85, 85, 1) !important;
+}
+.alram-tab-menu-focus:before {
+  opacity: 1 !important;
+}
+.alram-tab-cont {
+  position: relative;
+  display: none;
+
+  padding: 40px;
+  padding-right: 0;
+}
+.alram-tab-cont-focus {
+  display: block !important;
+}
+
+.alram-cont-box {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.alram-day {
+  position: relative;
+  display: block;
+  width: 62px;
+  height: 80px;
+  float: left;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #555;
+  line-height: 2rem;
+  text-align: center;
+  font-family: "NanumSquare";
+}
+
+.alram-day em {
+  position: relative;
+  display: block;
+  font-size: 4.8rem;
+  padding-top: 15px;
+  font-style: normal;
+}
+
+.alram-cont-box a {
+  position: relative;
+  display: block;
+  margin-left: 40px;
+  height: 80px;
+  width: 480px;
+  float: left;
+}
+
+.alram-cont-box a:hover .alram-box-tit {
+  text-decoration: underline;
+}
+
+.alram-box-tit {
+  position: relative;
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #555;
+  letter-spacing: -0.5px;
+  font-family: "NanumSquare";
+}
+
+.alram-box-more {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  display: block;
+  font-family: "NanumSquare";
+  font-size: 1.7rem;
+  color: #999;
+  font-weight: 400;
+  letter-spacing: -2.5px;
+}
+
+.alram-box-more i {
+  vertical-align: -2px;
+}
+
+.alram-link {
+  position: absolute;
+  top: 75px;
+  right: 60px;
+  font-family: "NanumSquare";
+  color: #555;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
 /* 일정표영역 */
 /* content-navi */
-.content-navi{
+.content-navi {
   position: relative;
-    display: block;
-    height: 80px;
-    width: 1280px;
-    margin: 0 auto;
+  display: block;
+  height: 80px;
+  width: 1280px;
+  margin: 0 auto;
 }
-.content-tab{
+.content-tab {
   position: relative;
   display: block;
   height: 100%;
@@ -280,19 +577,21 @@
   cursor: pointer;
   overflow: hidden;
 }
-.content-tab-img{
+.content-tab-img {
   position: absolute;
   right: 0;
   bottom: 0;
   display: block;
+  width: 100%;
+  height: 100%;
 }
-.content-tab-icon{
+.content-tab-icon {
   position: relative;
   display: block;
   width: 80px;
   height: 80px;
   float: left;
-  font-size: 3.0rem;
+  font-size: 3rem;
   text-align: center;
   line-height: 80px;
 
@@ -308,11 +607,11 @@
   padding: 30px 25px;
 
   font-size: 1.9rem;
-  font-family: 'NanumSquare';
+  font-family: "NanumSquare";
   font-weight: 400;
   color: #333;
 }
-.sw-navi-prev{
+.sw-navi-prev {
   position: absolute;
   left: 0;
   top: 0;
@@ -358,19 +657,107 @@
   color: #ec008c;
 }
 /* 현재 포커스가 된 slide tap */
-.sw-navi .swiper-slide-active .content-tab{
-  background-color:#ec008c ;
+.sw-navi .swiper-slide-active .content-tab {
+  background-color: #ec008c;
 }
-.sw-navi .swiper-slide-active .content-tab .content-tab-img{
+.sw-navi .swiper-slide-active .content-tab .content-tab-img {
   display: none;
 }
-.sw-navi .swiper-slide-active .content-tab .content-tab-icon{
+.sw-navi .swiper-slide-active .content-tab .content-tab-icon {
   opacity: 1;
-  background-color:#bf0172 ;
+  background-color: #bf0172;
 }
-.sw-navi .swiper-slide-active .content-tab .content-tab-icon i{
-opacity: 0.5;
+.sw-navi .swiper-slide-active .content-tab .content-tab-icon i {
+  opacity: 0.5;
 }
-.sw-navi .swiper-slide-active .content-tab .content-tab-tit{
+.sw-navi .swiper-slide-active .content-tab .content-tab-tit {
+  color: #fff;
+}
+
+/* 일정표 */
+ .calendar-wrap {
+  position: relative;
+  display: block;
+}
+
+.cal-bg {
+  background: url("../images/cal.png") no-repeat center;
+  background-size: cover;
+  height: 510px;
+}
+.cal-bg-list {
+  background: #2a3a67 url("../images/logo_lg_gry_oct.png") no-repeat right bottom;
+  height: 510px;
+}
+
+.cal-list {
+  position: relative;
+  display: block;
+
+  padding-left: 70px;
+  padding-top: 35px;
+}
+
+.cal-list > li {
+  position: relative;
+  display: block;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+.cal-area {
+  position: relative;
+  display: block;
+  float: left;
+  width: 40px;
+  margin-right: 38px;
+  font-family: "NanumSquare";
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 28px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.cal-link {
+  position: relative;
+  display: block;
+  float: left;
+}
+.cal-tit {
+  position: relative;
+  display: block;
+  font-family: "NanumSquare";
+  font-size: 1.7rem;
+  font-weight: 100;
+  color: #fff;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.cal-more {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  opacity: 0.5;
+  font-family: "NanumSquare";
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+.cal-more i {
+  vertical-align: -2px;
+}
+.cal-link:hover .cal-tit {
+  text-decoration: underline;
+}
+.cal-detail {
+  position: absolute;
+  right: 30px;
+  bottom: 130px;
+
+  display: inline-block;
+  font-family: "NanumSquare";
+  font-size: 1.7rem;
+  font-weight: 500;
   color: #fff;
 }
