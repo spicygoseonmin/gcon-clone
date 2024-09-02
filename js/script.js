@@ -72,17 +72,62 @@ $(document).ready(function () {
   const hHeight = hTop_H + hMiddle_H;
   $(window).scroll(function () {
     // 스크롤바의 위치값을 파악한다
-    const scY = $(window).scrollTop();
+    let scY1 = $(window).scrollTop();
     // console.log(scY);
-    if (scY >= hHeight) {
+    if (scY1 >= hHeight) {
       $(".header").addClass("h-fix");
       $(".logo-gnb").addClass("h-show");
       $(".gnb").addClass("h-fix-gnb");
+      $(".gotop").addClass("gotop_focus");
     } else {
       $(".header").removeClass("h-fix");
       $(".logo-gnb").removeClass("h-show");
       $(".gnb").removeClass("h-fix-gnb");
+      $(".gotop").removeClass("gotop_focus");
     }
+  });
+  // fix기능 관련
+  const fixA = $(".fix-a");
+  $.each(fixA, function (index, item) {
+    // console.log(index);
+    $(this).click(function (e) {
+      // e.preventDefault();
+      fixA.removeClass("fix-a-focus");
+      fixA.eq(index).addClass("fix-a-focus");
+    });
+  });
+  // 스크롤 시에 우측 고정 메뉴 포코스 관련 코드
+  let hubPosY = $("#hub").offset().top - 66; //hub의 위치값
+  let snsPosY = $("#sns").offset().top - 66; //hub의 위치값
+  // console.log(hubPosY);
+  // console.log(snsPosY);
+  $(window).scroll(function () {
+    // 스크롤 바의 위치 파악 px값
+    let scy = $(window).scrollTop();
+    // console.log(scy);
+    // 스크롤 바의 위치 파악 px 값
+
+    if (scy >= snsPosY) {
+      fixA.removeClass("fix-a-focus");
+      fixA.eq(2).addClass("fix-a-focus");
+    } else if (scy >= hubPosY) {
+      fixA.removeClass("fix-a-focus");
+      fixA.eq(1).addClass("fix-a-focus");
+    } else {
+      fixA.removeClass("fix-a-focus");
+      fixA.eq(0).addClass("fix-a-focus");
+    }
+  });
+
+  // 위로가기 기능
+  $(".gotop").click(function (e) {
+    e.preventDefault();
+    $("html").stop().animate(
+      {
+        scrollTop: 0,
+      },
+      600
+    );
   });
   // swiper
   // content 슬라이드
@@ -203,14 +248,14 @@ $(document).ready(function () {
       hubInfos.eq(index).addClass("hub-info-focus");
     });
   });
-  //sns 기능
+  // sns기능
   const snsCate = $(".sns-cate li a");
   const snsCont = $(".sns-cont");
   snsCont.eq(0).show();
   $.each(snsCate, function (index, item) {
     $(this).click(function (e) {
       e.preventDefault();
-      // 5번쨰 버튼을 임시로 처리한다
+      // 5번째 버튼은 임시로 처리한다.
       if (index == 4) {
         return;
       }
@@ -233,30 +278,39 @@ $(document).ready(function () {
     });
   });
   // news-room
-  const newsCate = $(".news-cate li a")
-  let newsFocusNum = 0
-  const newsCont = $(".news-cont")
-  newsCont.eq(newsFocusNum).show()
-  $.each(newsCate, function(index, item){
-    $(this).click(function(e){
-      e.preventDefault()
-      // 일단 모두 제거한다
-      newsCate.removeClass("news-focus")
-      newsCate.eq(index).addClass("news-focus")
-      newsCont.hide()
-      newsFocusNum = index
-      newsCont.eq(newsFocusNum).show()
-    })
-    $(this).mouseenter(function(){
-      $(this).addClass("news-focus")
-    })
-    $(this).mouseleave(function(){
-      if(newsFocusNum == index){
-        return
+  const newsCate = $(".news-cate li a");
+  let newsFocusNum = 0;
+  const newsCont = $(".news-cont");
+  newsCont.eq(newsFocusNum).show();
+  $.each(newsCate, function (index, item) {
+    $(this).click(function (e) {
+      e.preventDefault();
+      // 일단 모두 제거한다.
+      newsCate.removeClass("news-focus");
+      newsCate.eq(index).addClass("news-focus");
+      newsCont.hide();
+      newsFocusNum = index;
+      newsCont.eq(newsFocusNum).show();
+    });
+    $(this).mouseenter(function () {
+      $(this).addClass("news-focus");
+    });
+    $(this).mouseleave(function () {
+      if (newsFocusNum == index) {
+        return;
       }
-      $(this).removwClass("news-focus")
-    })
-    
-  })
+      $(this).removeClass("news-focus");
+    });
+  });
+  // footer펼침목록
+  const linkListBt = $(".link-list-bt");
+  const linkSiteWrap = $(".link-site-wrap");
+  linkListBt.click(function (e) {
+    e.preventDefault();
+    linkSiteWrap.toggleClass("link-site-wrap-on");
+  });
+  // $("body").click(function(){
+  //   linkSiteWrap.removeClass("link-site-wrap-on")
+  // })
   // ====================================
 });
