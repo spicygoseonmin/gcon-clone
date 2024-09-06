@@ -70,22 +70,7 @@ $(document).ready(function () {
 
   // console.log( hTop_H );
   const hHeight = hTop_H + hMiddle_H;
-  $(window).scroll(function () {
-    // 스크롤바의 위치값을 파악한다
-    let scY1 = $(window).scrollTop();
-    // console.log(scY);
-    if (scY1 >= hHeight) {
-      $(".header").addClass("h-fix");
-      $(".logo-gnb").addClass("h-show");
-      $(".gnb").addClass("h-fix-gnb");
-      $(".gotop").addClass("gotop_focus");
-    } else {
-      $(".header").removeClass("h-fix");
-      $(".logo-gnb").removeClass("h-show");
-      $(".gnb").removeClass("h-fix-gnb");
-      $(".gotop").removeClass("gotop_focus");
-    }
-  });
+
   // fix기능 관련
   const fixA = $(".fix-a");
   $.each(fixA, function (index, item) {
@@ -96,26 +81,37 @@ $(document).ready(function () {
       fixA.eq(index).addClass("fix-a-focus");
     });
   });
-  // 스크롤 시에 우측 고정 메뉴 포코스 관련 코드
-  let hubPosY = $("#hub").offset().top - 66; //hub의 위치값
-  let snsPosY = $("#sns").offset().top - 66; //hub의 위치값
-  // console.log(hubPosY);
-  // console.log(snsPosY);
-  $(window).scroll(function () {
-    // 스크롤 바의 위치 파악 px값
-    let scy = $(window).scrollTop();
-    // console.log(scy);
-    // 스크롤 바의 위치 파악 px 값
 
-    if (scy >= snsPosY) {
+  $(window).scroll(function () {
+    // 스크롤바의 위치값을 파악한다
+    // 스크롤바의 위치값을 파악한다
+    let scy = $(window).scrollTop();
+    console.log(scy);
+
+    if (scy >= 1194) {
+      // 스크롤 위치가 1516px 이상일 때
       fixA.removeClass("fix-a-focus");
       fixA.eq(2).addClass("fix-a-focus");
-    } else if (scy >= hubPosY) {
+    } else if (scy >= 571) {
+      // 스크롤 위치가 861px 이상 1516px 미만일 때
       fixA.removeClass("fix-a-focus");
       fixA.eq(1).addClass("fix-a-focus");
-    } else {
+    } else if (scy >= 0) {
+      // 스크롤 위치가 0px 이상 861px 미만일 때
       fixA.removeClass("fix-a-focus");
       fixA.eq(0).addClass("fix-a-focus");
+    }
+    // 두 번째 기능: 스크롤 위치에 따라 header의 클래스 변경
+    if (scy >= hHeight) {
+      $(".header").addClass("h-fix");
+      $(".logo-gnb").addClass("h-show");
+      $(".gnb").addClass("h-fix-gnb");
+      $(".gotop").addClass("gotop_focus");
+    } else {
+      $(".header").removeClass("h-fix");
+      $(".logo-gnb").removeClass("h-show");
+      $(".gnb").removeClass("h-fix-gnb");
+      $(".gotop").removeClass("gotop_focus");
     }
   });
 
